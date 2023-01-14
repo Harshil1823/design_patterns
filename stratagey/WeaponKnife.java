@@ -1,8 +1,14 @@
 package stratagey;
 import java.util.Random;
-
+/*
+ * how WeaponKnife behaves and implements weaponBehavior interface
+ * @author Harshil Shah
+ */
 public class WeaponKnife implements WeaponBehavior{
 
+/*
+ *  @returns action on how will the knife attack
+ */
     @Override
     public String attack() {
 

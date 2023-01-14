@@ -1,8 +1,15 @@
 package stratagey;
 import java.util.Random;
-
+/*
+ * 
+ * how WeaponSowrd behaves and implements weaponBehavior interface
+ * @author Harshil Shah
+ */
 public class WeaponSword implements WeaponBehavior {
-
+    
+/*
+ *  *  @returns action on how will the sword attack
+ */
     @Override
     public String attack() {
 

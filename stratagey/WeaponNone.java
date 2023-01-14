@@ -1,8 +1,13 @@
 package stratagey;
 import java.util.Random;
-
+/*
+ * how WeaponNone behaves and implements weaponBehavior interface
+ * @author Harshil Shah
+ */
 public class WeaponNone implements WeaponBehavior {
-
+/*
+ *  @returns action on how will not having any weapon react
+ */
     @Override
     public String attack() {
 
