@@ -1,11 +1,10 @@
 package observer;
 
 import java.util.ArrayList;
-import java.util.Observer;
 
-public class watchman implements Subject {
+public class Watchman implements Subject {
     private ArrayList<Observer> observers;
-    public watchman(){
+    public Watchman(){
         observers = new ArrayList<Observer>();
     }
 
