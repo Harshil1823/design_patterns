@@ -8,7 +8,7 @@ public class Teacher implements Observer {
     public void update(int Warning) {
         if(Warning == 1) {
             System.out.println("Teacher: Helps get every kid home safe");
-        }else if(Warning ==2 ){
+        }else if(Warning == 2){
             System.out.println("Teacher: Brings all students to the underground shelter");
         }      
     }
