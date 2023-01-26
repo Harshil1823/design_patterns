@@ -1,10 +1,18 @@
 package decorator;
-
+/**
+ * gets description of ConeType
+ * and the cost of a special coneType 
+ * @author Harshil Shah
+ */
 public class Cone extends IceCream {
 
     private ConeType coneType;
 
-   
+/**
+* constructor, initializes instance variable
+* @param coneType gives description variable value(what type of cone it is)
+*e.g Sugar_cone, Waffle_Cone etc..
+*/
     public Cone (ConeType coneType){
         this.coneType = coneType;
         if(coneType == coneType.SUGAR_CONE){
@@ -28,6 +36,10 @@ public class Cone extends IceCream {
         }
         */
     }
+/**
+ * calculates price for each different coneType
+ * @return cost of specific conetype
+ */
     public double getCost() {
 
         double tempNum = 0.0;
