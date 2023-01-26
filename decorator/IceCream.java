@@ -1,5 +1,11 @@
 package decorator;
 
-public class IceCream {
-    
+public abstract class IceCream {
+    protected String description;
+
+    public String toString(){
+        return description;
+    }
+
+    public abstract double getCost();
 }
