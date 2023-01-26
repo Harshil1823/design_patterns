@@ -12,7 +12,7 @@ public abstract class ScoopDecorator extends IceCream {
     }
 
     public String toString(){
-        return iceCream.description + ", " + numScoops + " scoops of " + flavor + " ice cream";
+        return iceCream.toString() + ", " + numScoops + " scoops of " + flavor + " ice cream";
     }
 
     public double getCost(){
