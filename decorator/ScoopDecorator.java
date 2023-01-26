@@ -12,18 +12,21 @@ public abstract class ScoopDecorator extends IceCream {
     }
 
     public String toString(){
-        return description + ", " + numScoops + " scoops of " + flavor + " ice cream";
+        return iceCream.description + ", " + numScoops + " scoops of " + flavor + " ice cream";
     }
 
     public double getCost(){
         if(flavor.equals("Vanilla")){
-            return flavorCost = 1.25 * numScoops;
+            flavorCost = 1.25 * numScoops;
+            return iceCream.getCost() + flavorCost ;
         }else if(flavor.equals("Chocolate")){
-            return flavorCost = 1.5 * numScoops;
+            flavorCost = 1.5 * numScoops;
+            return iceCream.getCost() + flavorCost ;
         }else if(flavor.equals("Strawberry")){
-            return flavorCost = 1.4 * numScoops;
+            flavorCost = 1.4 * numScoops;
+            return iceCream.getCost() + flavorCost ;
         }else{
-            return flavorCost;
+            return iceCream.getCost() ;
         }
     }
 }

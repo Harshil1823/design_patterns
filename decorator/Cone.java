@@ -13,7 +13,7 @@ public class Cone extends IceCream {
             this.description = "Waffle cone";
         }else if (coneType.equals("PRETZEL CONE")){
             this.description = "Pretzel cone";
-        }else if ( coneType.equals("CHOCOLATE_DIPPED_CONE")){
+        }else if (coneType.equals("CHOCOLATE_DIPPED_CONE")){
             this.description = "Chocolate Dipped Cone";
         }
         
