@@ -14,7 +14,7 @@ public abstract class IceCream {
         return description;
     }
 /**
- * abstract method forces child to inherit it
+ * abstract method forces children to inherit it
  * @return - Toal cost of icecream
  */
     public abstract double getCost();

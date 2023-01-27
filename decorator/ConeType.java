@@ -1,5 +1,7 @@
 package decorator;
-
+/**
+ * Enum constants 
+ */
 public enum ConeType {
   SUGAR_CONE,
   WAFFLE_CONE,
