@@ -11,7 +11,8 @@ public abstract class Puzzle {
 
     public String assemble () {
         String result = "putting to gether a " + name + 
-                "\nthis puzzle is made out of " + material + "\n";
+                "\nthis puzzle is made out of " + material + "\n"
+                + "adding the following pieces\n";
         
         for(String piece : pieces){
             result += "- " + piece + "\n";
