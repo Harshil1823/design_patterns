@@ -4,8 +4,14 @@ public class MelissaAndDougStore extends ToyStore {
 
     @Override
     public Puzzle createPuzzle(String type) {
-        // TODO Auto-generated method stub
-        return null;
+
+        if(type.equalsIgnoreCase("color")){
+            return new WoodColorPuzzle();
+        }else if(type.equalsIgnoreCase("animal")){
+            return new WoodAnimalPuzzle();
+        }else{
+            return null;
+        }
     }
     
 }
