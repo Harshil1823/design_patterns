@@ -1,7 +1,16 @@
 package factory;
-
+/**
+ * Creates WoodColorPuzzle 
+ * children of Puzzle class
+ * @author - Harshil Shah
+ */
 public class WoodColorPuzzle extends Puzzle{
     
+    /**
+     * gives the variable Name in puzzle value(who created it)
+     * gievs the variable Material in Puzzle value(what material it is)
+     * Adds the pieces in ArrayList pieces
+     */
     public WoodColorPuzzle(){
         this.name = "Animal Puzzle by Melissa and Doug";
         this.material = "wood";
