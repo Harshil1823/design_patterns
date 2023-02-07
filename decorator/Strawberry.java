@@ -18,6 +18,7 @@ public class Strawberry extends ScoopDecorator {
     public Strawberry(IceCream iceCream, int numScoops) {
         super(iceCream, numScoops);
         flavor = "Strawberry";
+        flavorCost = 1.4 * numScoops;
     }
     
 }

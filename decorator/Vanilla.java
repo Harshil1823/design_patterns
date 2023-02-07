@@ -7,7 +7,6 @@ package decorator;
  */
 
 public class Vanilla extends ScoopDecorator{
-
 /**
  * constructor 
  * gives flavor variable value Vanilla
@@ -18,6 +17,7 @@ public class Vanilla extends ScoopDecorator{
     public Vanilla(IceCream iceCream, int numScoops) {
         super(iceCream, numScoops);
         flavor = "Vanilla";
+        flavorCost = 1.25 * numScoops;
     }
     
 }
