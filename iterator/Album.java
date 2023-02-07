@@ -12,13 +12,15 @@ public class Album {
     } 
 
     public boolean addSong (String name, String artist, double length, Genre genre) {
-        Song songs = new Song(name, artist, length, genre);
-        if (this.count >= MAX_Songs) {
-			return false;
-		} else {
-            count += 1;  // increment count
+        // Song songs = new Song(name, artist, length, genre);
+        Song newSong = new Song(name, artist, length, genre);
+        for (int i = 0; i < songs.length; i++) {
+          if (songs[i] == null) {
+            songs[i] = newSong;
             return true;
-		}
+          }
+        }
+        return false;
     }
     
     public AlbumIterator createIterator() {
