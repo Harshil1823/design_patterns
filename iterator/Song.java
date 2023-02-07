@@ -15,8 +15,8 @@ public class Song {
 
     public String toString(){
         String printToUser = "";
-        printToUser = this.name + "by " + this.artist + "category: " + this.genre + 
-                            " length: " + length + "min";
+        printToUser = this.name + " by " + this.artist + " category: " + this.genre + 
+                            " length: " + length + " min";
         return printToUser;
     }
 }
