@@ -1,5 +1,9 @@
 package iterator;
-
+/**
+ * Enum constants are created
+ * in this class
+ * @author Harshil shah
+ */
 public enum Genre {
     Rock,
     Pop, 
