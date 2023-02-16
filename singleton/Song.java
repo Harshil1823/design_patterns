@@ -11,6 +11,9 @@ public class Song {
     public String getTitle(){
         return this.title;
     }
+    public String getArtist(){
+        return this.artist;
+    }
     public String toString(){
         return "Let's jam to " + title + " by " + artist ;
     }

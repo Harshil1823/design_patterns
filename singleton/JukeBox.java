@@ -27,9 +27,19 @@ public class JukeBox {
         if (!hasMoreSongs()) {
             return "You need to add songs to the list";
         } else {
+            String nextSongTitle = songQueue.poll();
+            for (Song song : songs) {
+                if (song.getTitle().equals(nextSongTitle)) {
+                    String message = "Let's jam to " + song.getTitle() + " by " + song.getArtist();
+                    return message;
+                }
+            }
+            /* 
             String nextSong = songQueue.poll();
             return "Let's jam to " + nextSong + ".";
+            */
         }
+        return null;
     }
 
     public String requestSong(String title) {
