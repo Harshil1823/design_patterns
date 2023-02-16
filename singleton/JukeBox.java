@@ -23,29 +23,29 @@ public class JukeBox {
     }
 
     public String playNextSong() {
-        if (songs.isEmpty()) {
+
+        if (!hasMoreSongs()) {
             return "You need to add songs to the list";
         } else {
-            Song nextSong = songs.get(0);
-            songs.remove(0);
-            return "Let's jam to " + nextSong.getTitle();
+            String nextSong = songQueue.poll();
+            return "Let's jam to " + nextSong + ".";
         }
     }
 
     public String requestSong(String title) {
         for (int i = 0; i < songs.size(); i++) {
             if (songs.get(i).getTitle().equals(title)) {
-                songQueue.offer(title);
-                int position = i + 1; // Add 1 to the index to get the correct position
+                songQueue.add(title);
+                int position = songQueue.size();
                 return title + " is now number " + position + " on the list";
             }
         }
-        return "Sorry we do not have the song " + title;
+        return "Sorry, we do not have the song " + title;
     }
 
     public boolean hasMoreSongs() {
-        return !songs.isEmpty();
+        return !songQueue.isEmpty();
+        //return !songs.isEmpty();
     }
 
-    
 }

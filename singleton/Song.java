@@ -12,6 +12,6 @@ public class Song {
         return this.title;
     }
     public String toString(){
-        return "";
+        return "Let's jam to " + title + " by " + artist ;
     }
 }
