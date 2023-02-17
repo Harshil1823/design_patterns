@@ -49,7 +49,7 @@ public class JukeBox {
             String nextSongTitle = songQueue.poll();
             for (Song song : songs) {
                 if (song.getTitle().equals(nextSongTitle)) {
-                    String message = "Let's jam to " + song.getTitle() + " by " + song.getArtist();
+                    String message = song.toString();
                     return message;
                 }
             }

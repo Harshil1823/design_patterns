@@ -23,14 +23,9 @@ public class Song {
         return this.title;
     }
     /**
-     * getter
-     * @return artist
-     */
-    public String getArtist(){
-        return this.artist;
-    }
-    /**
-     * simpel toString method
+     * simple toString method
+     * that returns what songs we are jamming to 
+     * and what artist it is from
      */
     public String toString(){
         return "Let's jam to " + title + " by " + artist ;
