@@ -18,19 +18,19 @@ public class Package {
     }
     public String order() {
         setState(orderedState);
-        return state.getStatus() + " " + state.getETA();
+        return state.getStatus() + "\n" + state.getETA();
     }
     public String mail() {
         setState(inTransitState);
-        return state.getStatus() + " " + state.getETA();
+        return state.getStatus() + "\n" + state.getETA();
     }
     public String received() {
         setState(deliveredState);
         return state.getStatus();
     }
     public String delay() {
-        state.delay();
-        return state.getETA();
+       // state.delay();
+       return state.delay() + "\n" + state.getETA();
     }
     public void setState(State state) {
         this.state = state;
