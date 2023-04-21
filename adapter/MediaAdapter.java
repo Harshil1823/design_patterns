@@ -81,29 +81,4 @@ public class MediaAdapter implements Media {
         }
         return allReviews;
     }
-    
-    /*
-    public ArrayList<Review> getReviews() {
-        ArrayList<Review> allReviews = new ArrayList<Review>();
-        ArrayList<Review> reviews = new ArrayList<Review>();
-        for(String review : littleMedia.getReviews()) {
-            String [] parts = review.split(" - ");
-            double rating = Double.parseDouble(parts[0].split(" ")[0]);
-            String comment = parts[1];
-            String [] names = parts[2].split(" ");
-            String firstName = names[0];
-            String lastName = "";
-            // addding a check statement 
-            if(names.length > 1) {
-                lastName = names[1];
-            }
-            Date date = new Date();
-            allReviews.add(new Review(firstName, lastName, date, rating, comment));
-        }
-        for (Review review : reviews) {
-            allReviews.add(review);
-        }
-        return allReviews;
-    }
-    */
 }
