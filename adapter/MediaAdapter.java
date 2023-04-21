@@ -1,6 +1,7 @@
 package adapter;
 
 import java.security.spec.NamedParameterSpec;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -55,7 +56,33 @@ public class MediaAdapter implements Media {
      * now it holds first name, last name, date, rating, 
      * and then the comment rather than holding userName
      */
-    @Override
+    public ArrayList<Review> getReviews() {
+        ArrayList<Review> allReviews = new ArrayList<Review>();
+        ArrayList<String> reviewStrings = littleMedia.getReviews();
+        for(String reviewString : reviewStrings) {
+            String[] parts = reviewString.split(" - ");
+            double rating = Double.parseDouble(parts[0].split(" ")[0]);
+            String comment = parts[1];
+            String[] names = parts[2].split(" ");
+            String firstName = names[0];
+            String lastName = "";
+            if(names.length > 1) {
+                lastName = names[1];
+            }
+            // Parse the date from the review string
+            SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+            Date date = null;
+            try {
+                date = dateFormat.parse(parts[2]);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            allReviews.add(new Review(firstName, lastName, date, rating, comment));
+        }
+        return allReviews;
+    }
+    
+    /*
     public ArrayList<Review> getReviews() {
         ArrayList<Review> allReviews = new ArrayList<Review>();
         ArrayList<Review> reviews = new ArrayList<Review>();
@@ -78,4 +105,5 @@ public class MediaAdapter implements Media {
         }
         return allReviews;
     }
+    */
 }
