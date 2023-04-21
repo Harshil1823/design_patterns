@@ -50,7 +50,11 @@ public class MediaAdapter implements Media {
         String tempName = firstName + " " + lastName;
         littleMedia.addReview(tempName, date, (int)rating, comment);
     }
-
+    /**
+     * String manipulation done to getReviews 
+     * now it holds first name, last name, date, rating, 
+     * and then the comment rather than holding userName
+     */
     @Override
     public ArrayList<Review> getReviews() {
         ArrayList<Review> allReviews = new ArrayList<Review>();
